@@ -5,7 +5,7 @@ from textblob import TextBlob
 from nltk import word_tokenize
 from nltk.probability import FreqDist
 
-# nltk.download('punkt')
+
 
 from flask import Flask
 from flask import render_template
