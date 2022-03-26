@@ -24,7 +24,7 @@ def sentiment_analyzer(string):
     scores = sia.polarity_scores(string)['compound']
     if scores >= 0.5:
         return 'positive'
-    elif scores < 0.5 & scores != 0:
+    elif scores < 0.5 and scores != 0:
         return 'negative'
     else:
         return 'not classified'
