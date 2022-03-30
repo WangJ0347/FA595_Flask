@@ -1,11 +1,14 @@
 import pandas as pd
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-from textblob import TextBlob
+from textblob import TextBlob, Word
 from nltk import word_tokenize
 from nltk.probability import FreqDist
 
 # nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+
 
 from flask import Flask
 from flask import render_template
@@ -70,6 +73,16 @@ def plural_singular_nouns(string):
     else:
         return "no noun founds!"
 
+
+def definition(string):
+    blob = TextBlob(string)
+    words = blob.words
+    ret_val = {}
+    for word in words:
+        ret_val[word] = Word.define(word)
+    return ret_val
+
+
 @app.route("/post", methods=['GET', 'POST'])
 def input_string():
     if request.method == 'POST':
@@ -88,6 +101,8 @@ def input_string():
                     res_dict['POS tags'] = pos(string)
                 if 'plural_singular' in services:
                     res_dict['Singular & Plural nouns'] = plural_singular_nouns(string)
+                if 'word_definition' in services:
+                    res_dict['Word definition'] = definition(string)
                 return {"success": True, 'response': res_dict}
             else:
                 return {'success': False, 'error': 'No listed service submitted'}, 400
