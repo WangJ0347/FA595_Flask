@@ -1,10 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Documentations</title>
 </head>
+
 <body>
-$END$
+    {% block content %}
+    <div class="documentations_container">
+        <div class="documentations_title">
+            <h2 align="center">Documentation</h2><!--The title of the project-->
+        </div>
+        <div class="documentations_content">
+            <div class="documentations_p">
+                <h3>Services</h3>
+                <p>tags:<br>
+                    pos: Part of Speech tags<br>
+                    sentiment: Sentiment Analyzer<br>
+                    plural_singular: Singular & Plural nouns<br>
+                    subjectivity: Subjectivity<br>
+                    word_definition: Words Definition<br>
+                    frequency: Words Frequency<br>
+                    <br>
+                </p>
+            </div>
+            <div class="documentations_p">
+                <h3>Get</h3>
+                <p>How:<br>
+                    request.get('url')
+                    <br>
+                </p>
+            </div>
+            <div class="documentations_p">
+                <h3>Post</h3>
+                <p>How:<br>
+                    payload: a list of at least 1 service tags<br>
+                    request.post('url', data = payload)<br>
+                    <br>
+                    Example:<br>
+                    payload = ['pos','sentiment']
+                    request.post('...../post', data = payload)
+                    <br>
+                </p>
+            </div>
+        </div>
+        <div class="documentations_content"> <!--The description text-->
+            <div class="documentations_p">
+                <h3>Sentiment Analyzer</h3>
+                <p>Purpose: <br>
+                    The function can be used to analyze the general sentiment of input text (positive, negative, unclassified)
+                    <br>
+                    <br>
+                    Describe:<br>
+                    This service is based on nltk Vader functions.
+                    VADER (Valence Aware Dictionary and Sentiment Reasoner) is a lexicon and rule-based sentiment analysis tool, it is used to quantify how much of positive or negative emotion the text has and also the intensity of emotion.
+                    The service provides this last value, the intensity of the emotion.
+                    On detail, it returns the compound, the most important measurement generated from the analysis.
+                    Higher the compound, more positive is the string submitted.
+                    In addition, the function set a threshold at compound equal to 0.5, if it is higher it states that the string has a positive sentiment, if it is lower it suggests a negative sentiment.
+                    <br>
+                </p>
+            </div>
+            <div class="documentations_p">
+                <h3>Word Frequency</h3>
+                <p>Purpose: <br>
+                    The function can be used to generate the frequency of each word in the input text
+                    <br>
+                    <br>
+                    Describe:<br>
+                    This service is based on nltk functions.
+                    It generates as response the frequency of each word of the string provided.
+                    It is based on the frequency distribution probability in the nltk package.
+                    It returns a list with the frequency of each word.
+                    <br>
+                </p>
+            </div>
+            <div class="documentations_p">
+                <h3>Subjectivity</h3>
+                <p>Purpose: <br>
+                    The function can be used to analyze the subjectivity of input text
+                    <br>
+                    <br>
+                    Describe:<br>
+                    This service is based on TextBlob sentiment analysis.
+                    It provides the perceived feeling from the input string in terms of objectivity or subjectivity statement.
+                    If the result obtained is higher than 0.5 the string most likely is a subjective consideration, commonly considered a true fact.
+                    If it is lower it is an objective speech, so a personal consideration.
+                    <br>
+                </p>
+            </div>
+            <div class="documentations_p">
+                <h3>Part of Speech tags</h3>
+                <p>Purpose: <br>
+                    The function provides the speech tag for each word of input text.
+                    <br>
+                    <br>
+                    Describe:<br>
+                    This service is based nltk, it uses the word tokenization.
+                    It provides the part of the speech for each word.
+                    Below is the detailed documentation for the most common POS.
+                    <br>
+                    <br>
+                    IN preposition/subordinating conjunction
+
+                    JJ adjective<br>
+
+                    JJR adjective, comparative<br>
+
+                    JJS adjective, superlative<br>
+
+                    NN noun, singular<br>
+
+                    NNS noun, plural<br>
+
+                    NNP proper noun, singular<br>
+
+                    POS possessive ending parent’s<br>
+
+                    PRP personal pronoun<br>
+
+                    PRP$ possessive pronoun<br>
+
+                    RB adverb<br>
+
+                    RP particle<br>
+
+                    TO infinite verb<br>
+
+                    VB verb, base form<br>
+
+                    VBD verb, past tense<br>
+
+                    VBG verb, gerund/present participle<br>
+
+                    VBN verb, past participle<br>
+
+                    VBP verb, sing. present, non-3d<br>
+
+                    VBZ verb, 3rd person sing. present<br>
+                    <br>
+                </p>
+            </div>
+            <div class="documentations_p">
+                <h3>Singular & Plural nouns</h3>
+                <p>Purpose: <br>
+                    The function identifies the plural and singular nouns in the input text
+                    <br>
+                    <br>
+                    Describe:<br>
+                    This service is based on TextBlob sentiment analysis.
+                    It takes all the noun from a string and if they are singular (NN) the function provide the plural while if it is plural (NNS), it provides the singular.
+                    The results are organized in a dictionary.
+                    <br>
+                </p>
+            </div>
+            <div class="documentations_p">
+                <h3>Words Definition</h3>
+                <p>Purpose: <br>
+                    The function provide definition of each word in the input text
+                    <br>
+                    <br>
+                    Describe:<br>
+                    This service is based on the TextBlob package.
+                    It provides the definition of each word present on the input string. The result is organized in a dictionary.
+                    The result is organized in a dictionary.
+                    On detail, the function created divide each word in the input sentence and generate the definition for each of it.
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
 </body>
 </html>
