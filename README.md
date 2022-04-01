@@ -2,19 +2,21 @@
 
 # 1 Sentiment analyzer
 This service is based on nltk Vader functions. VADER (Valence Aware Dictionary and sEntiment Reasoner) is a lexicon and rule-based sentiment analysis tool, it is used to quantify how much of positive or negative emotion the text has and also the intensity of emotion.
-The servise generates the sentiment analysis of the string provided. On detail, it returns the conpound, the most important mesurement generated from the analysis.
+The servise provide this last value, the intensity of the emotion. 
+On detail, it returns the conpound, the most important mesurement generated from the analysis.
 Higher the compound, more positive is the string submitted. In addition the function set a threasold at compound equal to 0.5, if it is higher it states
 that the string has a positive sentiment, if it is lower it suggests a negative sentiment.
 
 # 2 Word frequency
 This service is based on nltk functions. It generates as response the frequency of each word of the string provided.
-It is based on the frequency distribution probability in the nltk package. It returns a list with the frequency of the words.
+It is based on the frequency distribution probability in the nltk package. It returns a list with the frequency of each word.
 
 # 3 Subjectivity
-This service is based on TextBlob sentiment analysis. It provides the perceived feeling from the input string in terms of objective or subjective statement. If the result obtained is higher than 0.5 the string most likely is a subjective consideration while it is lower it is an objective speach.
+This service is based on TextBlob sentiment analysis. It provides the perceived feeling from the input string in terms of objectivity or subjectivity statement. If the result obtained is higher than 0.5 the string most likely is a subjective consideration, commonly considerated a true fact, while if it is lower it is an objective speech, so a personal consideration.
 
 # 4 Part of Speech
-This service is based nltk and it uses the word tokenization. It provide the part of the speech for each word. Below the datailed documentation for the most common POS.
+This service is based nltk and it uses the word tokenization. It provide the part of the speech for each word. 
+Below the datailed documentation for the most common POS.
 
 IN    preposition/subordinating conjunction 
 
@@ -26,7 +28,7 @@ JJS   adjective, superlative
 
 NN    noun, singular 
 
-NNS   noun plural
+NNS   noun, plural
 
 NNP   proper noun, singular 
 
@@ -36,9 +38,9 @@ PRP   personal pronoun
 
 PRP$  possessive pronoun
 
-RB    adverb – very, silently,  
+RB    adverb  
 
-RP    particle – give up 
+RP    particle
 
 TO    infinite verb
 
