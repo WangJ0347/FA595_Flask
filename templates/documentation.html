@@ -6,13 +6,14 @@
 </head>
 
 <body>
+    {% extends "form.html" %}
     {% block content %}
-    <div class="documentations_container">
-        <div class="documentations_title">
+    <div class="deploy_container">
+        <div class="deploy_title">
             <h2 align="center">Documentation</h2><!--The title of the project-->
         </div>
-        <div class="documentations_content">
-            <div class="documentations_p">
+        <div class="deploy_content">
+            <div class="deploy_p">
                 <h3>Services</h3>
                 <p>tags:<br>
                     pos: Part of Speech tags<br>
@@ -24,21 +25,21 @@
                     <br>
                 </p>
             </div>
-            <div class="documentations_p">
+            <div class="deploy_p">
                 <h3>Get</h3>
                 <p>How:<br>
                     request.get('url')
                     <br>
                 </p>
             </div>
-            <div class="documentations_p">
+            <div class="deploy_p">
                 <h3>Post</h3>
                 <p>How:<br>
                     payload: a list of at least 1 service tags<br>
                     request.post('url', data = payload)<br>
                     <br>
                     Example:<br>
-                    payload = ['pos','sentiment']
+                    payload = ['pos','sentiment']<br>
                     request.post('...../post', data = payload)
                     <br>
                 </p>
