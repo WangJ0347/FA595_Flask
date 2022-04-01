@@ -1,7 +1,8 @@
 # FA595_Flask
 
 # 1 Sentiment analyzer
-This service is based on nltk functions. It provides the sentiment analysis of the string provided. On detail it returns the conpound.
+This service is based on nltk Vader functions. VADER (Valence Aware Dictionary and sEntiment Reasoner) is a lexicon and rule-based sentiment analysis tool, it is used to quantify how much of positive or negative emotion the text has and also the intensity of emotion.
+The servise generates the sentiment analysis of the string provided. On detail, it returns the conpound, the most important mesurement generated from the analysis.
 Higher the compound, more positive is the string submitted. In addition the function set a threasold at compound equal to 0.5, if it is higher it states
 that the string has a positive sentiment, if it is lower it suggests a negative sentiment.
 
