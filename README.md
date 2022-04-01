@@ -16,23 +16,41 @@ This service is based on TextBlob sentiment analysis. It provides the perceived 
 This service is based nltk and it uses the word tokenization. It provide the part of the speech for each word. Below the datailed documentation for the most common POS.
 
 IN    preposition/subordinating conjunction 
+
 JJ    adjective 
+
 JJR   adjective, comparative  
+
 JJS   adjective, superlative  
+
 NN    noun, singular 
+
 NNS   noun plural
+
 NNP   proper noun, singular 
+
 POS   possessive ending parent’s 
+
 PRP   personal pronoun
+
 PRP$  possessive pronoun
+
 RB    adverb – very, silently,  
+
 RP    particle – give up 
+
 TO    infinite verb
+
 VB    verb, base form 
+
 VBD   verb, past tense 
+
 VBG   verb, gerund/present participle
+
 VBN   verb, past participle
+
 VBP   verb, sing. present, non-3d 
+
 VBZ   verb, 3rd person sing. present
 
 # 5 From plural to singular and viceversa
