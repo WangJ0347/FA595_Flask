@@ -8,10 +8,13 @@
 <body>
     {% extends "form.html" %}
     {% block content %}
-    <div class="deploy_container">
+
+    <div class="documentation_container">
         <div class="deploy_title">
             <h2 align="center">Documentation</h2><!--The title of the project-->
         </div>
+        <fieldset>
+            <h3 align="center">Code Deployment</h3>
         <div class="deploy_content">
             <div class="deploy_p">
                 <h3>Services</h3>
@@ -45,6 +48,9 @@
                 </p>
             </div>
         </div>
+        </fieldset>
+        <fieldset>
+            <h3 align="center">Services Description</h3>
         <div class="documentations_content"> <!--The description text-->
             <div class="documentations_p">
                 <h3>Sentiment Analyzer</h3>
@@ -170,6 +176,7 @@
                 </p>
             </div>
         </div>
+        </fieldset>
     </div>
     {% endblock %}
 </body>
