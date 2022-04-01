@@ -54,6 +54,6 @@ VBP   verb, sing. present, non-3d
 VBZ   verb, 3rd person sing. present
 
 # 5 From plural to singular and viceversa
-
+This service is based on TextBlob and Part Of Speech nltk. It takes all the noun from a string and if they are singular (NN) the function provide the plural while if it is plural (NNS), it provides the singular. The results are organized in a dictionary.
 
 # 6 Word definitions 
