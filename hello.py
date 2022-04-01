@@ -4,15 +4,13 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from textblob import TextBlob, Word
 from nltk import word_tokenize
 from nltk.probability import FreqDist
+from flask import Flask
+from flask import render_template
+from flask import request
 
 # nltk.download('punkt')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
-
-
-from flask import Flask
-from flask import render_template
-from flask import request
 
 app = Flask(__name__)
 
@@ -109,7 +107,7 @@ def input_string():
         else:
             return {'success': False, 'error': 'No string found'}, 400
     else:
-        return render_template('form.html')
+        return render_template('documentation.html')
 
 
 if __name__ == "__main__":
