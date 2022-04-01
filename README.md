@@ -60,3 +60,4 @@ VBZ   verb, 3rd person sing. present
 This service is based on TextBlob and Part Of Speech nltk. It takes all the noun from a string and if they are singular (NN) the function provide the plural while if it is plural (NNS), it provides the singular. The results are organized in a dictionary.
 
 # 6 Word definitions 
+This service is based on the TextBlob package. It provides the definition of each word present on the input string. The result is organized in a dictionary. On detail, the function created divide each word in the input sentence and generate the definition for each of it.
