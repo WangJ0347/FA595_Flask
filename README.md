@@ -16,7 +16,6 @@ This service is based on TextBlob sentiment analysis. It provides the perceived 
 This service is based nltk and it uses the word tokenization. It provide the part of the speech for each word. Below the datailed documentation for the most common POS.
 
 IN    preposition/subordinating conjunction 
-
 JJ    adjective 
 JJR   adjective, comparative  
 JJS   adjective, superlative  
