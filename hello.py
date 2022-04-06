@@ -12,6 +12,7 @@ from flask import request
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 nltk.download('vader_lexicon')
+nltk.download('punkt')
 
 app = Flask(__name__)
 
